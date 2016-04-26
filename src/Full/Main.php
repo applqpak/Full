@@ -64,7 +64,7 @@
       
       $this->logger()->info("Enabled.");
       
-      $this->cfg = new Config($this->dataPath() . "config.yml", Config::YAML, array("join_permission" => "full.join", "no_permission" => "You don't have permission to join!"));
+      $this->cfg = new Config($this->dataPath() . "config.yml", Config::YAML, array("join_permission" => "full.join", "no_permission" => "The server is full! You may visit mcpemm.buycraft.net and purchase VIP / VIP+ and join even if the server is full!", "VIPs" => 15));
     
     }
     
@@ -81,10 +81,12 @@
       $join_permission = $this->cfg->get("join_permission");
       
       $no_permission = $this->cfg->get("no_permission");
+      
+      $VIPs = $this->cfg->get("VIPs");
     
       $player = $event->getPlayer();
       
-      if($this->countOnlinePlayers() === 75)
+      if($this->countOnlinePlayers() === ($this->countOnlinePlayers() - $VIPs))
       {
       
         if(!($player->hasPermission($join_permission)))
