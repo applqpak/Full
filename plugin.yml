@@ -1,0 +1,15 @@
+name: Full
+version: 1.0.0
+author: applqpak
+api:
+- 1.0.0
+- 2.0.0
+main: Full\Main
+commands:
+  full:
+    description: Full Command.
+    usage: "/full <sub-command> <option>"
+    permission: full.command
+permissions:
+  full.command:
+    default: op
