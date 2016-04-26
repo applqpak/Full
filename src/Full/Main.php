@@ -60,7 +60,7 @@
     public function onEnable()
     {
     
-      $this->server()->pluginManager()->registerEvents($this, $this);
+      $this->server()->getPluginManager()->registerEvents($this, $this);
       
       $this->logger()->info("Enabled.");
       
