@@ -18,7 +18,7 @@
     public function dataPath()
     {
     
-      return $this->getServer()->getDataFolder();
+      return $this->getDataFolder();
     
     }
     
@@ -194,6 +194,5 @@
     }
   
   }
-  
   
 ?>
