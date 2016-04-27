@@ -88,7 +88,7 @@
     
       $player = $event->getPlayer();
       
-      if($this->countOnlinePlayers() === ($this->countOnlinePlayers() - $VIPs))
+      if($this->getServer()->getOnlinePlayers() === ($this->countOnlinePlayers() - $VIPs))
       {
       
         if(!($player->hasPermission($join_permission)))
