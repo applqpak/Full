@@ -63,6 +63,8 @@
       $this->server()->getPluginManager()->registerEvents($this, $this);
       
       $this->logger()->info("Enabled.");
+
+      @mkdir($this->dataPath());
       
       $this->cfg = new Config($this->dataPath() . "config.yml", Config::YAML, array("join_permission" => "full.join", "no_permission" => "The server is full! You may visit mcpemm.buycraft.net and purchase VIP / VIP+ and join even if the server is full!", "VIPs" => 15));
     
