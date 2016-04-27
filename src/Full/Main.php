@@ -73,7 +73,7 @@
     public function onDisable()
     {
     
-      $this->logger->info("Disabled.");
+      $this->logger()->info("Disabled.");
     
     }
     
