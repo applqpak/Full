@@ -39,7 +39,7 @@
     public function countOnlinePlayers()
     {
     
-      return count($this->server()->onlinePlayers());
+      return count($this->onlinePlayers());
     
     }
     
